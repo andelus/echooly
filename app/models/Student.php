@@ -34,6 +34,9 @@ class Student extends Eloquent implements UserInterface, RemindableInterface {
 		'email' => 'required|email|exists:students,email',
 		'password' => 'required'
 	];
+	public static $updateRules = [
+		'name' => 'required'
+	];
 	//Error Messages
 	public static $messages = [
 		'required' => 'Le champ :attribute est obligatoire'
@@ -84,8 +87,5 @@ class Student extends Eloquent implements UserInterface, RemindableInterface {
 		'1' => 'Sous-Groupe 11',
 		'2' => 'Sous-Groupe 21'
 	];
-	//Relations
-	public function course(){
-		return $this->hasMany('Course','student_id');
-	}
+
 }

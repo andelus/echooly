@@ -8,14 +8,18 @@
 
     <!-- Bootstrap -->
     {{HTML::style('/css/bootstrap.min.css')}}
+    {{HTML::style('/bower_components/angular-material/angular-material.css')}}
     <!-- Style -->
     {{HTML::style('/css/style.css')}}
     {{HTML::style('/css/animate.css')}}
     <!-- Montserrate font-->
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   
+    <!--Angular Material Design Dependencies-->
+    
+    
     {{HTML::script('/js/animations.js')}}
+    {{HTML::script('/js/lib/lib/jquery.min.js')}}
     <!--Angular JS-->
     {{HTML::script('/lib/angular.min.js')}}
     {{HTML::script('/lib/angular-route.min.js')}}

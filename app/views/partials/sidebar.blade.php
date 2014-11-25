@@ -33,8 +33,8 @@
 		<li><a href="#"><span class="glyphicon glyphicon-dashboard"></span>Dashboard</a></li>
 		<li><a href="#Students"><span class="glyphicon glyphicon-user"></span>Etudiants</a></li>
 		<li><a href="#Teachers"><span class="glyphicon glyphicon-briefcase"></span>Enseignants</a></li>
-		<li><a href="#"><span class="glyphicon glyphicon-calendar"></span>Cours</a></li>
-		<li><a href="#"><span class="glyphicon glyphicon-book"></span>Examens</a></li>
+		<li><a href="#Courses"><span class="glyphicon glyphicon-calendar"></span>Cours</a></li>
+		<li><a href="#Exams"><span class="glyphicon glyphicon-book"></span>Examens</a></li>
 		<li><a href="#"><span class="glyphicon glyphicon-bullhorn"></span>Annonces</a></li>
 		@endif
 		<!--Adminstration Sidebar-->

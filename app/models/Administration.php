@@ -1,7 +1,7 @@
 <?php
 
 class Administration extends Eloquent{
-	
+	           
 	protected $fillable = array();
 	protected $table = 'administration';
 	

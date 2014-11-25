@@ -15,8 +15,8 @@ class StudentController extends \BaseController {
 	{
 		$data = Auth::Student()->get();
 		$student = Student::findOrFail($data->id);
-		$courses = $student->course;
-		return View::make('students.dashboard')->withStudent($student)->withCourses($courses);
+		return View::make('students.dashboard')
+		->withStudent($student);
 	}
 
 	/**

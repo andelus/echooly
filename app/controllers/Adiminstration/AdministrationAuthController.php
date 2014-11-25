@@ -6,8 +6,8 @@ public function __construct(){
         $this->beforeFilter('csrf', array('on' => 'post'));
     }
 	//Login View
-	public function getLogin(){
-		if(Auth::Teacher()->check()){
+        public function getLogin(){
+            if(Auth::Teacher()->check()){
             return Redirect::route('teacher.dashboard');
         }
         else if(Auth::Student()->check()){
@@ -19,16 +19,17 @@ public function __construct(){
 	}
 	//Post Login
 	public function postLogin(){
-		//Getting the data from the inputs
+                    //Getting the data from the inputs
     	$data = Input::all();
-        //Vaidation of the data with $rules of the Student model
+                    //Vaidation of the data with $rules of the Student model
     	$validator = Validator::make($data, Administration::$rules, Administration::$messages);
-        if($validator->fails())
+                   if($validator->fails())
                 {
                     return Redirect::back()->withErrors($validator)->withInput();
                 }
         //Checking the input data with our custom Auth System        
-        if(Auth::Admin()->attempt(array('email' => Input::get('email'), 'password' => Input::get('password'))))
+        if(Auth::Admin()->attempt(
+                array('email' => Input::get('email'), 'password' => Input::get('password'))))
         {
             return Redirect::intended('/Administration');
         }

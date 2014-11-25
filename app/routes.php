@@ -75,7 +75,16 @@ Route::group(array('prefix' => 'Administration'), function() {
 /***API DATA**/
 Route::group(array('prefix' => 'api'), function(){
     Route::get('courses/{id}', array('uses' => 'CourseController@getJson', 'as' => 'student.api.courses'));
+/*API Route for Student CRUD */ 
     Route::get('admin/students', array('uses' => 'AdministrationController@showStudents', 'as' => 'admin.show.students'));
+    Route::put('admin/students/edit/{id}', array('uses'=>'AdministrationController@editStudents', 'as' => 'admin.edit.students'));
+    Route::post('admin/students/create', array('uses'=>'AdministrationController@createStudents', 'as' => 'admin.create.students'));
+    Route::delete('admin/students/delete/{id}', array('uses'=>'AdministrationController@deleteStudents', 'as' => 'admin.delete.students'));
+/*API Route for teachers CRUD*/
     Route::get('admin/teachers', array('uses' => 'AdministrationController@showTeachers', 'as' => 'admin.show.teachers'));
-    
+    Route::put('admin/teachers/edit/{id}', array('uses'=>'AdministrationController@editTeachers', 'as' => 'admin.edit.teachers'));
+    Route::post('admin/teachers/create', array('uses'=>'AdministrationController@createTeachers', 'as' => 'admin.create.teachers'));
+    Route::delete('admin/teachers/delete/{id}', array('uses'=>'AdministrationController@deleteTeachers', 'as' => 'admin.delete.teachers'));
+
 });
+

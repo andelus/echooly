@@ -6,9 +6,7 @@
           	
             <div >
                 <ul>
-                   @foreach ($courses as $course) 
-                	<li><a href="#">{{{$course->courseName}}}</a></li>
-                  @endforeach
+                  
                 </ul>
                
             </div>

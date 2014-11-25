@@ -19,6 +19,28 @@ class AdministrationController extends \BaseController {
 		}
 		
 	}
+	//Edit Students
+	public function editStudents($id){
+		$data = Input::all();
+		DB::table('students')
+		->where('id', $id)
+		->update($data);
+		return Response::json(array('success' => true));
+	}
+	//Create Students
+	public function createStudents(){
+		$data = Input::all();
+		DB::table('students')
+		->insert($data);
+		return Response::json(array('success' => true));
+	}
+	//Delete Students
+	public function deleteStudents($id){
+		DB::table('students')
+		->where('id', $id)
+		->delete();
+		return Response::json(array('success' => true));
+	}
 	//Show Teachers
 	public function showTeachers(){
 		$teachers = Teacher::all();
@@ -30,4 +52,28 @@ class AdministrationController extends \BaseController {
 		}
 		
 	}
+	//Edit Teachers
+	public function editTeachers($id){
+		$data = Input::all();
+		DB::table('teachers')
+		->where('id', $id)
+		->update($data);
+		return Response::json(array('success' => true));
+	}
+
+	//Create Teachers
+	public function createTeachers(){
+		$data = Input::all();
+		DB::table('teachers')
+		->insert($data);
+		return Response::json(array('success' => true));
+	}
+	//Delete Teachers
+	public function deleteTeachers($id){
+		DB::table('teachers')
+		->where('id', $id)
+		->delete();
+		return Response::json(array('success' => true));
+	}
+	
 }
